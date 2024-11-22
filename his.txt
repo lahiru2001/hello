@@ -1,0 +1,16 @@
+set terminal pdf
+set output "hist.pdf"
+set style data histogram
+set style histogram clustered gap 1
+set style fill solid border -1
+set boxwidth 0.9
+set title "City AQI Comparison"
+set xlabel "City"
+set ylabel "AQI"
+set xtics rotate by -45
+plot 'mydata.data' using 2:xtic(1) title "AQI Last Month", \
+     '' using 3 title "AQI Current Month"
+
+
+
+

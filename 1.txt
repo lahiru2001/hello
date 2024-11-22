@@ -1,0 +1,7 @@
+#include "ns3/netanim-module.h"
+
+
+AsciiTraceHelper ascii;
+pointToPoint.EnableAsciiAll(ascii.CreateFileStream("1024.tr"));
+
+AnimationInterface anim("p2p.xml");

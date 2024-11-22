@@ -1,0 +1,8 @@
+set terminal pdf
+set output "AQI.pdf"
+set title "Air Quality Index"
+set xlabel "City"
+set ylabel "AQI Last Month"
+set xtics ("Jaffna" 2,"NuwaraEliya" 3,"Negombo" 4,"Colombo" 5,"Battharamulla" 6,"Gampha" 7,"Kandy" 8,"Rathnapura" 9)
+plot "mydata.txt" using 1:2 with linespoints title "AQI Last Month", \
+     "mydata.txt" using 1:3 with linespoints title "AQI Current Month"
